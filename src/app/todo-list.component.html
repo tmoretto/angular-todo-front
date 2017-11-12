@@ -1,5 +1,7 @@
 <div class="todo-content">
-    <h1 class="page-title">My Todos</h1>
+    
+  <h1 class="page-title">My Todos</h1>
+
     <div class="todo-create">
       <form #todoForm="ngForm" (ngSubmit) = "createTodo(todoForm)" novalidate>
         <input type="text" id="title" class="form-control" placeholder="Type a todo and press enter..." 
@@ -14,6 +16,7 @@
         </div>
       </form>
     </div>
+
     <ul class="todo-list">
         <li *ngFor="let todo of todos" [class.completed]= "todo.completed === true" >
           <div class="todo-row" *ngIf="!editing || editingTodo.id != todo.id">
